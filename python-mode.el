@@ -2630,7 +2630,7 @@ instance.  Assumes an inferior Python is running."
 Used with `eval-after-load'."
   (let* ((version (let ((s (shell-command-to-string (concat py-shell-name
                                                             " -V"))))
-                    (string-match "^Python \\([0-9]+\\.[0-9]+\\_>\\)" s)
+                    (string-match "^Python \\([0-9]+\\.[0-9.]+\\_>\\)" s)
                     (match-string 1 s)))
          ;; Whether info files have a Python version suffix, e.g. in Debian.
          (versioned
